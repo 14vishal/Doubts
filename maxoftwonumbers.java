@@ -1,5 +1,6 @@
-public class maxoftwonumbers
-{
+import java.util.*;
+public class maxoftwonumbers {
+    
     static int maxProduct(int arr[]) {
         int n = arr.length ;
         if (n < 2)
@@ -28,4 +29,16 @@ public class maxoftwonumbers
         else return lowestnum*secondlowestnum;
 
     }
-  
+
+    public static void main(String[] args)
+    {
+        Scanner s = new Scanner(System.in);
+        int size = s.nextInt();
+        int[] arr = new int[size];
+        for(int i = 0; i < size; i++) {
+            arr[i] = s.nextInt();
+        }
+        int answer = maxProduct(arr);
+        System.out.print(answer);
+    }
+}
